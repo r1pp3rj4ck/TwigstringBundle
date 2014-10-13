@@ -28,7 +28,6 @@
         "twig/twig": "1.*"
     },
     "autoload": {
-        "psr-0": { "LK\\TwigstringBundle": "" }
-    },
-    "target-dir": "LK/TwigstringBundle"
+        "psr-4": { "LK\\TwigstringBundle\\": "" }
+    }
 }
