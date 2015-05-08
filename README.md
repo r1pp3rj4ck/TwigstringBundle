@@ -56,9 +56,23 @@ public function registerBundles() {
 
 ``` yaml
 # app/config/config.yml
-lk_twigstring: ~
+lk_twigstring:
+    # Decide if you want that all registered twig extensions must be loaded
+    load_twig_extensions: true # (default to true)
 ```
 
+### 5. Add additional extensions you are in need of (optional)
+
+``` yaml
+# app/config/services.yml
+services:
+    twigstring.extension.foo:
+        class: Foo\BarBundle\Twig\FooBarExtension
+        tags:
+            - { name: twigstring.extension }
+```
+
+For a list of available extensions see [fabpot/Twig-extensions](https://github.com/fabpot/Twig-extensions) or create one on your own with [Symfony Cookbook](http://symfony.com/doc/current/cookbook/templating/twig_extension.html) and [twig doc](http://twig.sensiolabs.org/doc/advanced.html#creating-an-extension).
 
 ## Usage
 
