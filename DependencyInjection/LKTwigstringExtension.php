@@ -38,7 +38,7 @@ class LKTwigstringExtension extends Extension
     {
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('services.xml');
-        $container->setAlias('twigstring', 'templating.engine.twig2');
+        $container->setAlias('twigstring', 'templating.engine.twigstring');
 
         $processor = new Processor();
         $configuration = new Configuration($container->getParameter('kernel.debug'));

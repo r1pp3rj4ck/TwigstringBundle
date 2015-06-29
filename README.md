@@ -36,7 +36,7 @@ You need to add it to your composer.json requirements:
 Install it by running the following command:
 
     $ ./composer.phar update r1pp3rj4ck/TwigstringBundle
-    
+
 ### 3. Registering the bundle in the kernel
 
 ``` php
@@ -59,6 +59,19 @@ public function registerBundles() {
 lk_twigstring: ~
 ```
 
+
+### 5. Add additional extensions you are in need of (optional)
+
+``` yaml
+# app/config/services.yml
+services:
+    twigstring.extension.foo:
+        class: Foo\BarBundle\Twig\FooBarExtension
+        tags:
+            - { name: twigstring.extension }
+```
+
+For a list of available extensions see [fabpot/Twig-extensions](https://github.com/fabpot/Twig-extensions) or create one on your own with [Symfony Cookbook](http://symfony.com/doc/current/cookbook/templating/twig_extension.html) and [twig doc](http://twig.sensiolabs.org/doc/advanced.html#creating-an-extension).
 
 ## Usage
 
