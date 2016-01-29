@@ -26,8 +26,8 @@
         "symfony/twig-bundle": "~2.3|~3.0"
     },
     "require-dev": {
+        "symfony/symfony": "~2.3|~3.0",
         "phpunit/phpunit": "~4.0",
-        "symfony/framework-bundle": "~2.3|~3.0",
         "twig/extensions": "^1.0"
     },
     "autoload": {
