@@ -16,9 +16,6 @@ Extension ideas:
 
 ## Installation
 
-If you are an advanced Symfony developer, you know how things are done. The package's name is `r1pp3rj4ck/TwigstringBundle` and you need the `dev-master` version of it, and the bundle's FQN is `LK\TwigstringBundle\LKTwigstringBundle()`. You also need a top-level entry to your config: `lk_twigstring: ~`.
-
-Of course, if you're not sure about yourself, here is the step-by-step installation procedure:
 
 ### 1. Register the bundle in composer
 
@@ -26,7 +23,7 @@ You need to add it to your composer.json requirements:
 ``` js
 {
     "require": {
-         "r1pp3rj4ck/TwigstringBundle": "dev-master"
+         "zeliard91/twigstring-bundle": "~1.0"
     }
 }
 ```
@@ -35,7 +32,7 @@ You need to add it to your composer.json requirements:
 
 Install it by running the following command:
 
-    $ ./composer.phar update r1pp3rj4ck/TwigstringBundle
+    $ ./composer.phar update zeliard91/twigstring-bundle
     
 ### 3. Registering the bundle in the kernel
 
@@ -103,7 +100,7 @@ $vars['test'] = 'u ' . $this->get('twigstring')->render('v {{ var }} {% if var i
 
 ## License
 
-The bundle is licensed under MIT license. For full license see [LICENSE](https://github.com/r1pp3rj4ck/TwigstringBundle/blob/master/LICENSE) file
+The bundle is licensed under MIT license. For full license see [LICENSE](https://github.com/zeliard91/TwigstringBundle/blob/master/LICENSE) file
 
 ### Authors
-LarsK (Lars Krüger), cordoval (Luis Cordova), r1pp3rj4ck (Attila Bukor)
+LarsK (Lars Krüger), cordoval (Luis Cordova), r1pp3rj4ck (Attila Bukor), zeliard91 (Damien Matabon)

@@ -1,9 +1,9 @@
 {
-    "name": "r1pp3rj4ck/twigstring-bundle",
+    "name": "zeliard91/twigstring-bundle",
     "type": "symfony-bundle",
     "description": "Renders strings instead of files with Twig",
-    "keywords": ["Twig string"],
-    "homepage": "https://github.com/r1pp3rj4ck/TwigstringBundle",
+    "keywords": ["Twig string", "twing", "string", "bundle"],
+    "homepage": "https://github.com/zeliard91/TwigstringBundle",
     "license": "MIT",
     "authors": [
         {
@@ -19,6 +19,10 @@
             "name": "r1pp3rj4ck / Attila Bukor",
             "email": "attila.bukor@gmail.com",
             "homepage": "http://r1pp3rj4ck.wordpress.com"
+        },
+        {
+            "name": "zeliard91 / Damien Matabon",
+            "email": "damien.matabon@gmail.com"
         }
     ],
     "require": {
