@@ -1,6 +1,8 @@
 TwigstringBundle information & howto
 ====================================
 
+[![Build Status](https://travis-ci.org/zeliard91/TwigstringBundle.svg?branch=master)](https://travis-ci.org/zeliard91/TwigstringBundle)
+
 This Symfony2 Bundle adds the possibility to render strings instead of files with the Symfony2 native Twig templating engine.
 The Bundle adds an additional service named `twigstring`. It is used the same way as the original templating service.
 The only difference is that the first argument of the method `render(<string>, [<array])` is a string to parse instead of a template file.
