@@ -24,9 +24,9 @@ matrix:
   - php: 5.4
     env: SYMFONY_VERSION=3.0.*
 
-cache: 
-  directories: 
-    - $COMPOSER_CACHE_DIR
+cache:
+  directories:
+    - $HOME/.composer/cache
 
 before_script:
   - composer self-update
