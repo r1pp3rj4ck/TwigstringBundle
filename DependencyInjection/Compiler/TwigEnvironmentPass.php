@@ -10,6 +10,7 @@ use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
  * Adds tagged twig.extension and twigstring.extension services to twigstring service.
  *
  * @author Fabien Potencier <fabien@symfony.com>
+ * @see Symfony\Bundle\TwigBundle\DependencyInjection\Compiler\TwigEnvironmentPass
  */
 class TwigEnvironmentPass implements CompilerPassInterface
 {
