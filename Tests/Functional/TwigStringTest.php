@@ -17,10 +17,10 @@ class TwigStringTest extends \PHPUnit_Framework_TestCase
         $kernel->boot();
 
         $container = $kernel->getContainer();
-        $content = $container->get('twigstring')->render('Hello {{ name }}', ['name' => 'Roger']);
+        $content = $container->get('twigstring')->render('Hello {{ name }}', array('name' => 'Roger'));
         $this->assertEquals('Hello Roger', $content, 'Check simple var assigment');
 
-        $content = $container->get('twigstring')->render('Hello {{ name | truncate(2) }}', ['name' => 'Roger']);
+        $content = $container->get('twigstring')->render('Hello {{ name | truncate(2) }}', array('name' => 'Roger'));
         $this->assertEquals('Hello Ro...', $content, 'Check simple var assigment + use of text extension');
     }
 
