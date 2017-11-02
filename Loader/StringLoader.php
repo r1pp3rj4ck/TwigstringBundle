@@ -11,10 +11,10 @@ namespace LK\TwigstringBundle\Loader;
 
 class StringLoader implements \Twig_LoaderInterface
 {
-	public function load($name)
+    public function load($name)
     {
-		return new $name;
-	}
+        return new $name;
+    }
     
     /**
      * {@inheritdoc}
@@ -22,6 +22,14 @@ class StringLoader implements \Twig_LoaderInterface
     public function getSource($name)
     {
         return $name;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getSourceContext($name)
+    {
+        return new \Twig_Source($name, md5($name));
     }
 
     /**
@@ -37,7 +45,11 @@ class StringLoader implements \Twig_LoaderInterface
      */
     public function getCacheKey($name)
     {
-        return $name;
+        if (preg_match('/^[a-f0-9]{32}$/', $name) === 1) {
+            return $name;
+        } else {
+            return md5($name);
+        }
     }
 
     /**
