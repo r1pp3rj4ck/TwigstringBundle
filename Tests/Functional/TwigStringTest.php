@@ -13,10 +13,12 @@ class TwigStringTest extends \PHPUnit_Framework_TestCase
 {
     public function test()
     {
-        $kernel = new TwigEngineKernel('dev', true);
+        $kernel = new TwigEngineKernel('test', true);
         $kernel->boot();
 
         $container = $kernel->getContainer();
+        $container = $container->has('test.service_container') ? $container->get('test.service_container') : $container;
+
         $content = $container->get('twigstring')->render('Hello {{ name }}', array('name' => 'Roger'));
         $this->assertEquals('Hello Roger', $content, 'Check simple var assigment');
 
@@ -60,7 +62,9 @@ class TwigEngineKernel extends Kernel
             $definitionTwigText->addTag('twig.extension');
             $container->setDefinition('twig.extension.text', $definitionTwigText);
 
+
             $container->loadFromExtension('framework', array(
+                'test' => true,
                 'secret' => '$ecret',
                 'templating' => array(
                     'engines' => array('twig')
