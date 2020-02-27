@@ -1,9 +1,9 @@
 {
-    "name": "r1pp3rj4ck/twigstring-bundle",
+    "name": "zeliard91/twigstring-bundle",
     "type": "symfony-bundle",
     "description": "Renders strings instead of files with Twig",
-    "keywords": ["Twig string"],
-    "homepage": "https://github.com/r1pp3rj4ck/TwigstringBundle",
+    "keywords": ["Twig string", "twing", "string", "bundle"],
+    "homepage": "https://github.com/zeliard91/TwigstringBundle",
     "license": "MIT",
     "authors": [
         {
@@ -19,20 +19,27 @@
             "name": "r1pp3rj4ck / Attila Bukor",
             "email": "attila.bukor@gmail.com",
             "homepage": "http://r1pp3rj4ck.wordpress.com"
+        },
+        {
+            "name": "zeliard91 / Damien Matabon",
+            "email": "damien.matabon@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.3.2",
-        "symfony/framework-bundle": "2.*",
-        "symfony/security-bundle": "2.*",
-        "twig/twig": "1.*"
+        "symfony/twig-bundle": "^2.8|^3.4|^4.2"
+    },
+    "require-dev": {
+        "symfony/symfony": "^2.8|^3.4|^4.2",
+        "phpunit/phpunit": "^4.0|^5.4",
+        "twig/extensions": "^1.0"
     },
     "autoload": {
         "psr-4": { "LK\\TwigstringBundle\\": "" }
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-master": "2.0-dev"
         }
     }
 }

@@ -28,6 +28,10 @@ class Configuration implements ConfigurationInterface
     	$treeBuilder = new TreeBuilder();
     	$rootNode = $treeBuilder->root('lk_twigstring');
 
+        $rootNode
+            ->children()->booleanNode('load_twig_extensions')->defaultValue(true)->end()
+        ;
+
 		return $treeBuilder;
     }
 }

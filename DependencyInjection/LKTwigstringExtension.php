@@ -41,8 +41,10 @@ class LKTwigstringExtension extends Extension
         $container->setAlias('twigstring', 'templating.engine.twig2');
 
         $processor = new Processor();
-        $configuration = new Configuration($container->getParameter('kernel.debug'));
+        $configuration = new Configuration();
         $config = $processor->processConfiguration($configuration, $configs);
+
+        $container->setParameter('twigstring.load_twig_extensions', $config['load_twig_extensions']);
     }
 
     /**
